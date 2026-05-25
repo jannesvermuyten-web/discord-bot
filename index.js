@@ -8,49 +8,87 @@ const {
   Events
 } = require('discord.js');
 
+const { Rcon } = require('rcon-client');
+
+let rcon;
+
 const client = new Client({
   intents: [GatewayIntentBits.Guilds]
 });
 
-client.once(Events.ClientReady, () => {
+client.once(Events.ClientReady, async () => {
+
+  try {
+    rcon = new Rcon({
+      host: process.env.RCON_HOST,
+      port: parseInt(process.env.RCON_PORT),
+      password: process.env.RCON_PASSWORD
+    });
+
+    await rcon.connect();
+    console.log("✅ Connected to ARK RCON");
+  } catch (err) {
+    console.error("❌ RCON failed:", err);
+  }
+
   console.log(`Logged in as ${client.user.tag}`);
 });
 
 client.on(Events.InteractionCreate, async interaction => {
 
   // Slash command
-  if (interaction.isChatInputCommand()) {
+if (interaction.isChatInputCommand()) {
 
-    if (interaction.commandName === 'cluster') {
+  // /cluster command
+  if (interaction.commandName === 'cluster') {
 
-      const embed = new EmbedBuilder()
-        .setTitle('20x 2Man Cluster Information')
-        .setDescription('Server information & utility panel')
-        .setColor('#00ffcc');
+    const embed = new EmbedBuilder()
+      .setTitle('10x 2Man Cluster Information')
+      .setDescription('Server information & utility panel')
+      .setColor('#00ffcc');
 
-      const row = new ActionRowBuilder().addComponents(
-        new ButtonBuilder()
-          .setCustomId('ips')
-          .setLabel('IPs')
-          .setStyle(ButtonStyle.Primary),
+    const row = new ActionRowBuilder().addComponents(
+      new ButtonBuilder()
+        .setCustomId('ips')
+        .setLabel('IPs')
+        .setStyle(ButtonStyle.Primary),
 
-        new ButtonBuilder()
-          .setCustomId('mods')
-          .setLabel('Mods')
-          .setStyle(ButtonStyle.Secondary),
+      new ButtonBuilder()
+        .setCustomId('mods')
+        .setLabel('Mods')
+        .setStyle(ButtonStyle.Secondary),
 
-        new ButtonBuilder()
-          .setCustomId('settings')
-          .setLabel('Player Settings')
-          .setStyle(ButtonStyle.Success)
-      );
+      new ButtonBuilder()
+        .setCustomId('settings')
+        .setLabel('Player Settings')
+        .setStyle(ButtonStyle.Success)
+    );
+
+    await interaction.reply({
+      embeds: [embed],
+      components: [row]
+    });
+  }
+
+  // /testark command (SEPARATE)
+  if (interaction.commandName === 'testark') {
+
+    try {
+      const response = await rcon.send('ListPlayers');
 
       await interaction.reply({
-        embeds: [embed],
-        components: [row]
+        content: `ARK Response: ${response}`,
+        ephemeral: true
+      });
+
+    } catch (err) {
+      await interaction.reply({
+        content: 'RCON failed',
+        ephemeral: true
       });
     }
   }
+}
 
   // Button clicks
   if (interaction.isButton()) {
@@ -89,4 +127,4 @@ client.on(Events.InteractionCreate, async interaction => {
   }
 });
 
-client.login(process.env.TOKEN);
+client.login('MTUwODQ3NTIyNzgwNDI3NDc5MA.Gmnxbk.1yZIg2QkElNg9eqDtMUzLFutam74EF3z0BT8NI');
