@@ -14,6 +14,8 @@ const commands = [
     .setDescription('Test ARK RCON connection')
 ].map(command => command.toJSON());
 
+console.log("COMMANDS BEING SENT:", commands);
+
 const rest = new REST({ version: '10' })
   .setToken(process.env.DISCORD_TOKEN);
 
