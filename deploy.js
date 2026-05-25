@@ -18,10 +18,17 @@ const rest = new REST({ version: '10' })
   .setToken(process.env.DISCORD_TOKEN);
 
 (async () => {
-  await rest.put(
-    Routes.applicationCommands('1508475227804274790'),
-    { body: commands }
-  );
+  try {
+    await rest.put(
+      Routes.applicationGuildCommands(
+        '1508475227804274790',
+        '1457456325700223187'
+      ),
+      { body: commands }
+    );
 
-  console.log('Commands registered');
+    console.log('Commands registered');
+  } catch (err) {
+    console.error(err);
+  }
 })();
