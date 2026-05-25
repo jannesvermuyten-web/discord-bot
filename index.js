@@ -127,4 +127,4 @@ if (interaction.isChatInputCommand()) {
   }
 });
 
-client.login('MTUwODQ3NTIyNzgwNDI3NDc5MA.Gmnxbk.1yZIg2QkElNg9eqDtMUzLFutam74EF3z0BT8NI');
+client.login(process.env.DISCORD_TOKEN);
