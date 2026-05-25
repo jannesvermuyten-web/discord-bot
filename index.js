@@ -127,4 +127,4 @@ if (interaction.isChatInputCommand()) {
   }
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(DISCORD_TOKEN);
