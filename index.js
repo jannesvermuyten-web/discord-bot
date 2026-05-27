@@ -62,6 +62,11 @@ if (interaction.isChatInputCommand()) {
         .setCustomId('settings')
         .setLabel('Player Settings')
         .setStyle(ButtonStyle.Success)
+
+      new ButtonBuilder()
+        .setCustomId('rates')
+        .setLabel('Rates')
+        .setStyle(ButtonStyle.Danger)
     );
 
     await interaction.reply({
@@ -124,6 +129,25 @@ if (interaction.isChatInputCommand()) {
         ephemeral: true
       });
     }
+    
+    if (interaction.customId === 'rates') {
+      await interaction.reply({
+    content:
+`📈 **Server Rates**
+
+🦖 Taming: Instant
+📦 Harvest: 10x
+⚡ XP: 25x
+🥚 Breeding: 10x
+👶 Maturation: 25x
+🐤 EggHatchSpeed: 10x
+🔫 TurretDmg: 1x
+💥 TurretCap: 115
+☢️ BossNerf: 50%
+✈️ TekEngrams: lvl120`,
+    ephemeral: true
+  });
+}
   }
 });
 
