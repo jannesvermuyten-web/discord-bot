@@ -117,12 +117,15 @@ if (interaction.isChatInputCommand()) {
       });
     }
 
-    if (interaction.customId === 'mods') {
+  if (interaction.customId === 'mods') {
       await interaction.reply({
-        content: 'Update Soon!',
-        ephemeral: true
-      });
-    }
+        content:
+`🛠️ **Cluster Mods**
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
+    ephemeral: true
+  });
+}
 
     if (interaction.customId === 'settings') {
       await interaction.reply({
