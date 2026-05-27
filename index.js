@@ -61,7 +61,7 @@ if (interaction.isChatInputCommand()) {
       new ButtonBuilder()
         .setCustomId('settings')
         .setLabel('Player Settings')
-        .setStyle(ButtonStyle.Success)
+        .setStyle(ButtonStyle.Success),
 
       new ButtonBuilder()
         .setCustomId('rates')
