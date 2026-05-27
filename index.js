@@ -66,7 +66,12 @@ if (interaction.isChatInputCommand()) {
       new ButtonBuilder()
         .setCustomId('rates')
         .setLabel('Rates')
-        .setStyle(ButtonStyle.Danger)
+        .setStyle(ButtonStyle.Danger),
+
+      new ButtonBuilder()
+        .setCustomId('drops')
+        .setLabel('Drops')
+        .setStyle(ButtonStyle.Primary)
     );
 
     await interaction.reply({
@@ -145,6 +150,39 @@ if (interaction.isChatInputCommand()) {
 💥 TurretCap: 115
 ☢️ BossNerf: 50%
 ✈️ TekEngrams: lvl120`,
+    ephemeral: true
+      });
+    }
+
+    if (interaction.customId === 'drops') {
+  await interaction.reply({
+    content:
+`🎁 **Drop Information**
+
+⚪ **White Drops**
+• Boss Tributes
+
+🟢 **Green Drops**
+• Boss Tributes
+
+🔵 **Blue Drops**
+• Consumables
+
+🟣 **Purple Drops**
+• Saddles
+• Chance for Saddle Blueprints
+
+🟡 **Gold Drops**
+• Taming Supplies
+
+🔴 **Red Drops**
+• Weapons
+• Chance for Weapon Blueprints
+
+⭐ **Boosted Drops**
+• Better loot
+• Higher quality items
+• Increased quantities`,
     ephemeral: true
   });
 }
