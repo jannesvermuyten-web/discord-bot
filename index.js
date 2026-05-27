@@ -73,10 +73,17 @@ if (interaction.isChatInputCommand()) {
         .setLabel('Drops')
         .setStyle(ButtonStyle.Primary)
     );
+    
+    const row2 = new ActionRowBuilder().addComponents(
+      new ButtonBuilder()
+        .setCustomId('spawns')
+        .setLabel('Custom Spawns')
+        .setStyle(ButtonStyle.Secondary)
+    );
 
     await interaction.reply({
       embeds: [embed],
-      components: [row]
+      components: [row, row2]
     });
   }
 
@@ -183,6 +190,47 @@ if (interaction.isChatInputCommand()) {
 • Better loot
 • Higher quality items
 • Increased quantities`,
+    ephemeral: true
+  });
+}
+
+    if (interaction.customId === 'spawns') {
+  await interaction.reply({
+    content:
+`🦖 **Custom Spawn Locations**
+
+🎈 **Gasbag**
+• Redwoods: 44-78
+
+❄️ **Managarmr**
+• Snow: 30-70
+
+🦉 **Snow Owl**
+• Snow: 40-56
+
+🐍 **Basilisk**
+• Green Obelisk: 56-35
+
+🌊 **Shadowmane**
+• Rock In Water: 26-16
+
+🦍 **Dinopithecus**
+• Jungle: 35-26
+
+🦘 **Maewing**
+• Highlands NE-E
+
+🦇 **Desmodus**
+• Metal Cave: 35-24
+
+🐉 **Crystal Wyverns**
+• Desert: 75-83
+
+🦀 **Karkinos**
+• Wetlands Swamp: 45-22
+
+🐒 **Sinomacrops**
+• Jungle Blue Obelisk: 20-20`,
     ephemeral: true
   });
 }
