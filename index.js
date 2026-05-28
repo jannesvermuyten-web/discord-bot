@@ -56,17 +56,17 @@ if (interaction.isChatInputCommand()) {
       new ButtonBuilder()
         .setCustomId('mods')
         .setLabel('Mods')
-        .setStyle(ButtonStyle.Secondary),
+        .setStyle(ButtonStyle.Primary),
 
       new ButtonBuilder()
         .setCustomId('settings')
         .setLabel('Player Settings')
-        .setStyle(ButtonStyle.Success),
+        .setStyle(ButtonStyle.Primary),
 
       new ButtonBuilder()
         .setCustomId('rates')
         .setLabel('Rates')
-        .setStyle(ButtonStyle.Danger),
+        .setStyle(ButtonStyle.Primary),
 
       new ButtonBuilder()
         .setCustomId('drops')
@@ -78,17 +78,17 @@ if (interaction.isChatInputCommand()) {
       new ButtonBuilder()
         .setCustomId('spawns')
         .setLabel('Custom Spawns')
-        .setStyle(ButtonStyle.Secondary),
+        .setStyle(ButtonStyle.Primary),
 
       new ButtonBuilder()
         .setCustomId('dino_balance')
         .setLabel('Dino Dmg/Res Changes')
-        .setStyle(ButtonStyle.Secondary),
+        .setStyle(ButtonStyle.Primary),
 
       new ButtonBuilder()
         .setCustomId('timeline')
         .setLabel('Timeline')
-        .setStyle(ButtonStyle.Secondary)
+        .setStyle(ButtonStyle.Primary)
     );
 
     await interaction.reply({
