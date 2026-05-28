@@ -83,6 +83,11 @@ if (interaction.isChatInputCommand()) {
       new ButtonBuilder()
         .setCustomId('dino_balance')
         .setLabel('Dino Dmg/Res Changes')
+        .setStyle(ButtonStyle.Secondary),
+
+      new ButtonBuilder()
+        .setCustomId('timeline')
+        .setLabel('Timeline')
         .setStyle(ButtonStyle.Secondary)
     );
 
@@ -265,6 +270,17 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
 • Velonosaur: 0.7x resistance  
 • Maewing: 0.5x resistance  
 • Arthropluera: 2.0x resistance`,
+    ephemeral: true
+  });
+}
+
+    if (interaction.customId === 'timeline') {
+  await interaction.reply({
+    content:
+`⏳ **Dino Timeline**
+
+• 2h delay: Crystal Wyverns  
+• 24h delay: Giga, Carcharodontosaurus, Managarmr, Desmodus`,
     ephemeral: true
   });
 }
