@@ -263,6 +263,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
 • Spinosaurus: 1.5x resistance  
 • Therizinosaurus: 1.1x resistance  
 • Velonosaur: 0.7x resistance  
+• Maewing: 0.5x resistance  
 • Arthropluera: 2.0x resistance`,
     ephemeral: true
   });
