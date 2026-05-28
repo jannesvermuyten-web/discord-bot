@@ -78,6 +78,11 @@ if (interaction.isChatInputCommand()) {
       new ButtonBuilder()
         .setCustomId('spawns')
         .setLabel('Custom Spawns')
+        .setStyle(ButtonStyle.Secondary),
+
+      new ButtonBuilder()
+        .setCustomId('dino_balance')
+        .setLabel('Dino Dmg/Res Changes')
         .setStyle(ButtonStyle.Secondary)
     );
 
@@ -234,6 +239,31 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
 
 🐒 **Sinomacrops**
 • Jungle Blue Obelisk: 20-20`,
+    ephemeral: true
+  });
+}
+
+    if (interaction.customId === 'dino_balance') {
+  await interaction.reply({
+    content:
+`⚖️ **Dino Dmg/Res Changes**
+
+🟢 **Dmg**
+• Baryonyx: 2.0x  
+• Woolly Rhino: 2.0x  
+• Spinosaurus: 1.6x  
+• Arthropluera: 3.0x  
+• Therizinosaurus: 1.7x  
+• Mammoth: 1.5x  
+• Managarmr: 1.5x  
+
+🔴 **Res**
+• Managarmr: 0.7x resistance  
+• Woolly Rhino: 1.5x resistance  
+• Spinosaurus: 1.5x resistance  
+• Therizinosaurus: 1.1x resistance  
+• Velonosaur: 0.7x resistance  
+• Arthropluera: 2.0x resistance`,
     ephemeral: true
   });
 }
