@@ -123,8 +123,10 @@ if (interaction.isChatInputCommand()) {
     if (interaction.customId === 'ips') {
       await interaction.reply({
         content: 
-`Ragnarok: 92.42.45.236:27015
- Extinction: 92.42.45.236:27016`,
+`**Server IP's**
+
+-  Ragnarok: 92.42.45.236:27015
+-  Extinction: 92.42.45.236:27016`,
         ephemeral: true
       });
     }
