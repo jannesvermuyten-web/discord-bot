@@ -122,7 +122,8 @@ if (interaction.isChatInputCommand()) {
 
     if (interaction.customId === 'ips') {
       await interaction.reply({
-        content: 'Ragnarok: 144.76.91.226:27045',
+        content: 'Ragnarok: 92.42.45.236:27015',
+                 'Extinction: 92.42.45.236:27016'
         ephemeral: true
       });
     }
@@ -142,14 +143,14 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
         content:
 `⚙️ **Player Settings**
 
-❤️ HP: 15% Per Level  
+❤️ HP: 12% Per Level  
 🏃 Stam: 15% Per Level  
 🌊 Oxy: 60% Per Level  
 🍖 Food/Water: No Drain  
 🎒 Weight: Infinite  
-⚔️ Melee: 7.5% Per Level  
+⚔️ Melee: 5% Per Level  
 🏃‍♂️ Movement: 1.8% Per Level  
-🔨 Crafting Skill: 15% Per Level (Use Crafting Skill Potion)  
+🔨 Crafting Skill: 10% Per Level (Use Crafting Skill Potion)  
 🛡️ Fortitude: 10% Per Level`,
         ephemeral: true
       });
@@ -161,10 +162,10 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
 `📈 **Server Rates**
 
 🦖 Taming: Instant
-📦 Harvest: 10x
-⚡ XP: 25x
+📦 Harvest: 15x
+⚡ XP: 10x
 🥚 Breeding: 10x
-👶 Maturation: 25x
+👶 Maturation: 50x
 🐤 EggHatchSpeed: 10x
 🔫 TurretDmg: 1x
 💥 TurretCap: 115
@@ -212,26 +213,9 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
     content:
 `🦖 **Custom Spawn Locations**
 
-🎈 **Gasbag**
-• Redwoods: 44-78
-
-❄️ **Managarmr**
-• Snow: 30-70
-
-🦉 **Snow Owl**
-• Snow: 40-56
-
-🐍 **Basilisk**
-• Green Obelisk: 56-35
-
-🌊 **Shadowmane**
-• Rock In Water: 26-16
-
-🦍 **Dinopithecus**
-• Jungle: 35-26
 
 🦘 **Maewing**
-• Highlands NE-E
+• All Beaches
 
 🦇 **Desmodus**
 • Metal Cave: 35-24
@@ -279,7 +263,8 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
     content:
 `⏳ **Dino Timeline**
 
-• 2h delay: Crystal Wyverns  
+• 1h delay: Carbo and Equus
+• 8h delay: Paracer, Stego, Crystal wyverns, Desmo and Mana
 • 24h delay: Giga, Carcharodontosaurus, Managarmr, Desmodus`,
     ephemeral: true
   });
