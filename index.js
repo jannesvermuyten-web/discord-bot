@@ -268,7 +268,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
 
 • 1h delay: Carbo and Equus
 • 8h delay: Paracer, Stego, Crystal wyverns, Desmo and Mana
-• 24h delay: Giga, Carcharodontosaurus, Managarmr, Desmodus`,
+• 24h delay: Giga, Carcharodontosaurus`,
     ephemeral: true
   });
 }
