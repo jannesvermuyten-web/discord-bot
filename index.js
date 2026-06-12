@@ -218,7 +218,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3734107270`,
 
 
 🦘 **Maewing**
-• All Beaches
+• All Beaches on rag and city in ext
 
 🦇 **Desmodus**
 • Metal Cave: 35-24
