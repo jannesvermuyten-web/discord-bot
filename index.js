@@ -125,8 +125,7 @@ if (interaction.isChatInputCommand()) {
         content: 
 `**Server IP's**
 
--  Ragnarok: 92.42.45.236:27015
--  Extinction: 92.42.45.236:27016`,
+-  Ragnarok: 92.42.45.236:27016`,
         ephemeral: true
       });
     }
